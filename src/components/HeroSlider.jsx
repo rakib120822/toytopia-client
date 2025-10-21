@@ -25,7 +25,7 @@ export default function HeroSlider() {
 
       <Swiper
         autoplay={{
-          delay: 2000,
+          delay: 1500,
           pauseOnMouseEnter: true,
         }}
         navigation={{

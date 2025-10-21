@@ -39,9 +39,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="font-extrabold text-xl">
+        <Link className="font-extrabold text-xl">
           <span className="text-[#6EC1E4]">Toy</span>Topia
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex items-center gap-5 ">
@@ -61,7 +61,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">
+        <Link to={"/auth/login"} className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">
           Sign In
         </Link>
       </div>
