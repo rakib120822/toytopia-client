@@ -23,8 +23,9 @@ export const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/details",
+        path: "/details/:id",
         element: <DetailsPage />,
+        loader: ()=> fetch("/data.json")
       },{
         path:"/products",
         loader: ()=> fetch("/data.json"),

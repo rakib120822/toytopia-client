@@ -1,9 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 function Card({product}) {
-
-  const {toyName,rating,price,availableQuantity,pictureURL} = product;
+ 
+  const {toyName,rating,price,availableQuantity,pictureURL,toyId} = product;
   return (
   
       <div className="card bg-base-100  shadow-sm hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out">
@@ -29,7 +30,7 @@ function Card({product}) {
           </div>
 
           <div className="card-actions justify-center">
-            <button className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">View More</button>
+            <Link to={`/details/${toyId}`} className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">View More</Link>
           </div>
         </div>
       </div>
