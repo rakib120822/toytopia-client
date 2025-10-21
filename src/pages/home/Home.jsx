@@ -1,9 +1,13 @@
 import React from 'react'
+import HeroSlider from '../../components/HeroSlider'
 
 function Home() {
   return (
     <div>
-      this is home
+      <HeroSlider/>
+      <div>
+        
+      </div>
     </div>
   )
 }

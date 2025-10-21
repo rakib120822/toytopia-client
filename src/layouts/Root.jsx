@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 
 function Root() {
   return (
-    <div className="w-11/12 mx-auto  h-screen">
+    <div className="h-screen">
       <Navbar />
-      <div className="min-h-[calc(100%-335px)] py-20">
+      <div className="min-h-[calc(100%-310px)] pt-5">
         <Outlet />
       </div>
       <Footer />
