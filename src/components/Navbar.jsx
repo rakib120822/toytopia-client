@@ -1,5 +1,5 @@
 import React from "react";
-import {  Link, NavLink} from "react-router";
+import { Link, NavLink } from "react-router";
 
 function Navbar() {
   return (
@@ -32,25 +32,38 @@ function Navbar() {
             </li>
 
             <li>
+              <NavLink to="/products">Products</NavLink>
+            </li>
+            <li>
               <NavLink to="/profile">Profile</NavLink>
             </li>
           </ul>
         </div>
-        <a className="font-extrabold text-xl"><span className="text-[#6EC1E4]">Toy</span>Topia</a>
+        <a className="font-extrabold text-xl">
+          <span className="text-[#6EC1E4]">Toy</span>Topia
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex items-center gap-5 ">
           <li>
-            <NavLink to="/" className="font-semibold">Home</NavLink>
+            <NavLink to="/" className="font-semibold">
+              Home
+            </NavLink>
           </li>
-
           <li>
-            <NavLink to="/profile" className={"font-semibold"}>Profile</NavLink>
+            <NavLink to="/products" className={"font-semibold"}>Products</NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile" className={"font-semibold"}>
+              Profile
+            </NavLink>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">Sign In</Link>
+        <Link className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">
+          Sign In
+        </Link>
       </div>
     </nav>
   );

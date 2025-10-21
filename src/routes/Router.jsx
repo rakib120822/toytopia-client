@@ -6,6 +6,7 @@ import DetailsPage from "../pages/home/DetailsPage";
 import Login from "../pages/auth/Login";
 import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/auth/Register";
+import Products from "../pages/home/Products";
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ export const router = createBrowserRouter([
       {
         path: "/details",
         element: <DetailsPage />,
-      },
+      },{
+        path:"/products",
+        loader: ()=> fetch("/data.json"),
+        element:<Products/>
+      }
     ],
   },
   {

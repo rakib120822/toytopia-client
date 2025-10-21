@@ -5,8 +5,8 @@ function Card({product}) {
 
   const {toyName,rating,price,availableQuantity,pictureURL} = product;
   return (
-    <div>
-      <div className="card bg-base-100  shadow-sm">
+  
+      <div className="card bg-base-100  shadow-sm hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out">
         <figure className="h-[300px]">
           <img
             src={pictureURL}
@@ -33,7 +33,7 @@ function Card({product}) {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 
