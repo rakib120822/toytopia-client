@@ -1,0 +1,122 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://static01.galaxus.com/productimages/6/2/9/5/5/1/2/5/2/7/9/0/9/0/0/4/3/1/3/5277e4a6-484b-4b1b-aa72-9c59971a8a3a_cropped.jpg_720.jpeg",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Barbie Dream house",
+    "sellerName": "Happy Toys Hub",
+    "sellerEmail": "info@happytoyshub.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "A deluxe three-story Barbie Dream house with furniture and interactive features for hours of imaginative play.",
+    "pictureURL": "https://static01.nyt.com/images/2022/12/22/fashion/BARBIEDREAM-HOUSE-OPEN/BARBIEDREAM-HOUSE-videoSixteenByNineJumbo1600.jpg",
+    "subCategory": "Dolls & Playsets"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Hot Wheels Track Builder Set",
+    "sellerName": "City Toy Mart",
+    "sellerEmail": "sales@citytoymart.com",
+    "price": 34.99,
+    "rating": 4.6,
+    "availableQuantity": 120,
+    "description": "High-speed racing excitement! Kids can design, build, and race cars through custom tracks and loops.",
+    "pictureURL": "https://manojstores.com/wp-content/uploads/2023/12/TRACK-1.webp",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Teddy Bear Plush",
+    "sellerName": "Cuddle Corner",
+    "sellerEmail": "hello@cuddlecorner.com",
+    "price": 24.5,
+    "rating": 4.9,
+    "availableQuantity": 200,
+    "description": "A soft, huggable teddy bear that provides comfort and companionship for children of all ages.",
+    "pictureURL": "https://image.made-in-china.com/202f0j00OozCgeBFGkby/Big-Size-Brown-Teddy-Bear-Plush-Toy-for-Couch-Sofa-Office-Bed-Kids-Gift-Custom-Bear-Skins-Soft-Stuffed-Animal-Toy.webp",
+    "subCategory": "Stuffed Animals"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Play-Doh Fun Factory",
+    "sellerName": "Crafty Kids",
+    "sellerEmail": "support@craftykids.com",
+    "price": 19.99,
+    "rating": 4.5,
+    "availableQuantity": 95,
+    "description": "Colorful Play-Doh set with molds and tools that let kids express creativity and imagination.",
+    "pictureURL": "https://i.ytimg.com/vi/jCBmQHa8AJk/maxresdefault.jpg",
+    "subCategory": "Arts & Crafts"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Wooden Train Set",
+    "sellerName": "Tiny Tracks",
+    "sellerEmail": "sales@tinytracks.com",
+    "price": 29.99,
+    "rating": 4.6,
+    "availableQuantity": 150,
+    "description": "Classic wooden train set with tracks, bridges, and colorful cars for endless fun.",
+    "pictureURL": "https://thumbs.dreamstime.com/b/timeless-wooden-train-set-classic-railway-toy-playful-hours-lasting-memories-enchanting-evokes-sense-childhood-388382833.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Educational Alphabet Blocks",
+    "sellerName": "SmartKids Toys",
+    "sellerEmail": "info@smartkids.com",
+    "price": 22.99,
+    "rating": 4.8,
+    "availableQuantity": 180,
+    "description": "Wooden alphabet and number blocks that promote learning through play and exploration.",
+    "pictureURL": "https://media.istockphoto.com/id/543660416/vector/wooden-childrens-toy-alphabet-blocks-set.jpg?s=612x612&w=0&k=20&c=TkI3RCvGlMTm2qtRDkVqEFNbLcG02QGNMhK1JUK7IOc=",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "RC Monster Truck",
+    "sellerName": "SpeedZone Toys",
+    "sellerEmail": "contact@speedzone.com",
+    "price": 59.99,
+    "rating": 4.4,
+    "availableQuantity": 60,
+    "description": "Powerful remote-controlled monster truck built for rugged fun and outdoor excitement.",
+    "pictureURL": "https://www.losi.com/on/demandware.static/-/Sites-losi-us-Library/default/dwf41b0fea/homepage/LOS01026T4-homepage-video-still-1935x1080.jpg",
+    "subCategory": "Remote Control"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Unicorn Puzzle Set",
+    "sellerName": "Fantasy Fun Co.",
+    "sellerEmail": "help@fantasyfun.com",
+    "price": 14.99,
+    "rating": 4.3,
+    "availableQuantity": 130,
+    "description": "Magical unicorn-themed puzzle that helps develop problem-solving and motor skills.",
+    "pictureURL": "https://treasurehunt4kids.com/app/uploads/2021/05/unicorn-jigsaw-puzzle-to-print.jpeg",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Musical Drum Set for Kids",
+    "sellerName": "Little Beats",
+    "sellerEmail": "music@littlebeats.com",
+    "price": 39.99,
+    "rating": 4.7,
+    "availableQuantity": 85,
+    "description": "Interactive kids’ drum set with lights and sounds — inspires rhythm and coordination.",
+    "pictureURL": "https://thumbs.dreamstime.com/b/cute-boy-playing-drum-yellow-background-cute-boy-playing-drum-yellow-background-152807576.jpg",
+    "subCategory": "Musical Toys"
+  }
+]
