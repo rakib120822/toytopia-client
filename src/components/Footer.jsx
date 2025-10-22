@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-linear-to-r from-[#7B74E3] via-[#2B79E0] to-[#61D2E8]   p-10">
+    <footer className="footer sm:footer-horizontal bg-linear-to-r from-[#7B74E3] via-[#2B79E0] to-[#61D2E8]   py-3 px-5">
       <nav className="">
         <h6 className="text-2xl font-bold text-white">Services</h6>
         <Link className="link link-hover text-white/60">Payment Methods</Link>

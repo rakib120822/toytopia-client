@@ -52,7 +52,7 @@ function Register() {
   return (
     <div className="card bg-base-100 w-full max-w-sm shadow-lg">
       <div className="card-body p-5">
-        <h1 className="text-4xl font-bold text-center mb-2">Register Now!</h1>
+        <h1 className="text-4xl font-bold text-center mb-1">Register Now!</h1>
 
         <form onSubmit={handleRegister} className="text-black">
           <fieldset className="fieldset gap-4">
@@ -94,21 +94,21 @@ function Register() {
 
             <button
               type="submit"
-              className="btn bg-gradient-to-r from-[#297BE6] to-[#61D2E8] text-white mt-2"
+              className="btn bg-gradient-to-r from-[#297BE6] to-[#61D2E8] text-white mt-1"
             >
               Register
             </button>
           </fieldset>
         </form>
 
-        <p className="text-center font-semibold mt-2">
+        <p className="text-center font-semibold mt-1">
           Already have an account?{" "}
           <Link to="/auth/login" className="text-[#297BE6] underline">
             Please Login
           </Link>
         </p>
 
-        <div className="flex gap-1 items-center px-5 my-3">
+        <div className="flex gap-1 items-center px-5 my-1">
           <div className="w-full border-t border-black/70"></div>
           <p>Or</p>
           <div className="w-full border-t border-black/70"></div>

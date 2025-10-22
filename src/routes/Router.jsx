@@ -9,11 +9,13 @@ import Register from "../pages/auth/Register";
 import Products from "../pages/home/Products";
 import ErrorPage from "../pages/error/ErrorPage";
 import PrivateRoute from "../provider/PrivateRoute";
+import Spinner from "../components/Spinner";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    hydrateFallbackElement:<Spinner/>,
     children: [
       {
         index: true,

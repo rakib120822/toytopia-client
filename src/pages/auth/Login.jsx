@@ -1,17 +1,14 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 
-
 import { toast } from "react-toastify";
 import AuthContext from "../../context/AuthContext";
 
-
-
 function Login() {
-  const {setLoading,  setUser,logIn ,googleSignUp} = useContext(AuthContext);
+  const { setLoading, setUser, logIn, googleSignUp, } =
+    useContext(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation()
-  
+  const location = useLocation();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -21,17 +18,16 @@ function Login() {
       .then((res) => {
         setUser(res.user);
         toast.success("login successful");
-         e.target.reset();
+        e.target.reset();
         setLoading(false);
-        navigate(`${location.state? location.state : '/'}`)
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((err) => toast.error(err));
-      
   };
 
   const handleGoogleSignup = () => {
     googleSignUp()
-      .then(() => navigate(`${location.state? location.state : '/'}`))
+      .then(() => navigate(`${location.state ? location.state : "/"}`))
       .catch((err) => toast.error(err));
   };
 
@@ -95,7 +91,10 @@ function Login() {
         </div>
         <div className="flex flex-col gap-2">
           {/* Google */}
-          <button onClick={handleGoogleSignup} className="btn bg-white text-black border-[#e5e5e5]">
+          <button
+            onClick={handleGoogleSignup}
+            className="btn bg-white text-black border-[#e5e5e5]"
+          >
             <svg
               aria-label="Google logo"
               width="25"
