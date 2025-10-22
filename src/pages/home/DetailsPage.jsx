@@ -17,14 +17,35 @@ function DetailsPage() {
       <div className="col-span-6 flex justify-center items-center">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <fieldset className="fieldset">
-              <label className="label">Name</label>
-              <input type="text" className="input" placeholder="Your name" />
-              <label className="label">Email</label>
-              <input type="email" className="input" placeholder="Your email" />
-              
-              <button onClick={()=> toast.info("Thanks For Try!")} className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-4">Try Now</button>
-            </fieldset>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                toast.info("Thanks For Try!");
+              }}
+            >
+              <fieldset className="fieldset">
+                <label className="label">Name</label>
+                <input
+                  type="text"
+                  className="input"
+                  placeholder="Your name"
+                  name="name"
+                  required
+                />
+                <label className="label">Email</label>
+                <input
+                  type="email"
+                  className="input"
+                  placeholder="Your email"
+                  name="email"
+                  required
+                />
+
+                <button className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-4">
+                  Try Now
+                </button>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>

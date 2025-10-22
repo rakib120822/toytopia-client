@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import AuthContext from "../../context/AuthContext";
 
 function Register() {
-  const { register,profileUpdate } = useContext(AuthContext);
+  const { register, profileUpdate, googleSignUp } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const displayName = e.target.name.value;
@@ -31,7 +31,11 @@ function Register() {
     } else {
       register(email, password)
         .then(() => {
-          profileUpdate(displayName,photoURL).then(()=>{}).catch((err)=>{toast.error(err.message)})
+          profileUpdate(displayName, photoURL)
+            .then(() => {})
+            .catch((err) => {
+              toast.error(err.message);
+            });
           toast.success("Successfully Created Account!");
           e.target.reset();
         })
@@ -40,7 +44,9 @@ function Register() {
   };
 
   const handleGoogleSignup = () => {
-    // TODO: handle Google sign-up here
+    googleSignUp()
+      .then(() => toast.success("Successfully Created Account!"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
@@ -85,23 +91,6 @@ function Register() {
               className="input placeholder:text-black/40"
               placeholder="Password"
             />
-
-            <div className="flex justify-between items-center mt-2">
-              <label className="flex items-center gap-2 font-semibold text-black">
-                <input
-                  type="checkbox"
-                  className="checkbox border-2 border-black"
-                />
-                Remember me
-              </label>
-
-              <Link
-                to="/auth/forgot-password"
-                className="text-[#297BE6] underline font-semibold"
-              >
-                Forgot Password
-              </Link>
-            </div>
 
             <button
               type="submit"

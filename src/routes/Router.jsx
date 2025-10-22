@@ -8,6 +8,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/auth/Register";
 import Products from "../pages/home/Products";
 import ErrorPage from "../pages/error/ErrorPage";
+import PrivateRoute from "../provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: ()=> fetch("/data.json")
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/profile",
@@ -25,13 +26,18 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <DetailsPage />,
-        loader: ()=> fetch("/data.json")
-      },{
-        path:"/products",
-        loader: ()=> fetch("/data.json"),
-        element:<Products/>
-      }
+        element: (
+          <PrivateRoute>
+            <DetailsPage />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/products",
+        loader: () => fetch("/data.json"),
+        element: <Products />,
+      },
     ],
   },
   {
@@ -49,7 +55,7 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path:"/*",
-    element:<ErrorPage/>
-  }
+    path: "/*",
+    element: <ErrorPage />,
+  },
 ]);
