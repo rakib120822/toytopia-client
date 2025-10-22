@@ -1,7 +1,26 @@
-import React from "react";
-import { Link, NavLink } from "react-router";
+import React, { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
+import AuthContext from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 function Navbar() {
+  const { loading, setUser, user, logOut,setLoading } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleBtnClick = () => {
+    if (user) {
+      logOut()
+        .then(() => {
+          toast.success("Successfully Sign Out");
+          setUser(null);
+          setLoading(false);
+        })
+        .catch((err) => toast.error(err.message));
+    } else {
+      navigate("/auth/login");
+    }
+  };
+
   return (
     <nav className="navbar shadow-sm bg-white py-5">
       <div className="navbar-start">
@@ -51,7 +70,9 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/products" className={"font-semibold"}>Products</NavLink>
+            <NavLink to="/products" className={"font-semibold"}>
+              Products
+            </NavLink>
           </li>
           <li>
             <NavLink to="/profile" className={"font-semibold"}>
@@ -60,10 +81,41 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <Link to={"/auth/login"} className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white">
-          Sign In
-        </Link>
+
+      <div className="navbar-end space-x-3">
+        {!loading ? (
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar relative inline-block group"
+          >
+            <div className="w-10 rounded-full overflow-hidden">
+              <img
+                alt="User Avatar"
+                src={
+                  user?.photoURL
+                    ? user?.photoURL
+                    : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                }
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Tooltip */}
+            <span className="absolute top-full left-1/2 transform -translate-x-1/2 my-1 w-max max-w-xs bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
+              {user?.displayName || "Full Toy Name"}
+            </span>
+          </div>
+        ) : (
+          <span className="loading loading-spinner loading-xl"></span>
+        )}
+
+        <button
+          onClick={handleBtnClick}
+          className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white"
+        >
+          {user ? "Sign Out" : "Sign In"}
+        </button>
       </div>
     </nav>
   );

@@ -1,20 +1,27 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { Outlet } from 'react-router'
-import Footer from '../components/Footer'
-import { ToastContainer } from 'react-toastify'
+import React from "react";
+import Navbar from "../components/Navbar";
+import { Outlet } from "react-router";
+import Footer from "../components/Footer";
+import { ToastContainer } from "react-toastify";
 
 function AuthLayout() {
   return (
-    <div className="h-screen">
-      <Navbar />
-      <div className="h-[calc(100%-335px)] w-11/12  mx-auto ">
+    <div className="min-h-screen flex flex-col">
+      <header>
+        <Navbar />
+      </header>
+
+      <main className="flex-grow flex justify-center items-center py-5">
         <Outlet />
-      </div>
-      <Footer />
-      <ToastContainer />
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
+
+      <ToastContainer position="top-center"/>
     </div>
-  )
+  );
 }
 
-export default AuthLayout
+export default AuthLayout;

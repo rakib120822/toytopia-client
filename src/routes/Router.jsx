@@ -7,6 +7,7 @@ import Login from "../pages/auth/Login";
 import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/auth/Register";
 import Products from "../pages/home/Products";
+import ErrorPage from "../pages/error/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -47,4 +48,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:"/*",
+    element:<ErrorPage/>
+  }
 ]);

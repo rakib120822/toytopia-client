@@ -1,90 +1,135 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router";
 
+import { toast } from "react-toastify";
+import AuthContext from "../../context/AuthContext";
+
 function Register() {
+  const { register,profileUpdate } = useContext(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const displayName = e.target.name.value;
+    const photoURL = e.target.photoURL.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    const hasUppercase = /[A-Z]/;
+    const hasLowercase = /[a-z]/;
+    const minLength = /.{6,}/;
+
+    if (!hasUppercase.test(password)) {
+      toast.error("Password must have at least 1 uppercase letter.");
+      return;
+    }
+    if (!hasLowercase.test(password)) {
+      toast.error("Password must have at least 1 lowercase letter.");
+      return;
+    }
+    if (!minLength.test(password)) {
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    } else {
+      register(email, password)
+        .then(() => {
+          profileUpdate(displayName,photoURL).then(()=>{}).catch((err)=>{toast.error(err.message)})
+          toast.success("Successfully Created Account!");
+          e.target.reset();
+        })
+        .catch((err) => toast.error(err.message));
+    }
+  };
+
+  const handleGoogleSignup = () => {
+    // TODO: handle Google sign-up here
+  };
+
   return (
-    <div className="  h-full  py-5 ">
-      <div className="hero ">
-        <div className="hero-content">
-          <div className="card bg-base-100  w-full shadow-lg">
-            <div className="card-body p-5">
-              <h1 className="text-5xl font-bold">Register now!</h1>
-              <form className="text-black">
-                <fieldset className="fieldset gap-4">
-                  <label className="floating-label  text-black font-semibold">
-                    <span>Name</span>
+    <div className="card bg-base-100 w-full max-w-sm shadow-lg">
+      <div className="card-body p-5">
+        <h1 className="text-4xl font-bold text-center mb-2">Register Now!</h1>
 
-                    <input
-                      type="text"
-                      className="input placeholder:text-black/40 "
-                      placeholder="Name"
-                      name="name"
-                    />
-                  </label>
-                  <label className="floating-label text-black font-semibold">
-                    <span>Photo URL</span>
+        <form onSubmit={handleRegister} className="text-black">
+          <fieldset className="fieldset gap-4">
+            <label className="label text-black font-semibold">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="input placeholder:text-black/40"
+              placeholder="Name"
+            />
 
-                    <input
-                      type="text"
-                      className="input placeholder:text-black/40 "
-                      placeholder="Photo URL"
-                      name="photoURL"
-                    />
-                  </label>
-                  <label className="floating-label text-black font-semibold">
-                    <span>Email</span>
+            <label className="label text-black font-semibold">Photo URL</label>
+            <input
+              type="text"
+              name="photoURL"
+              className="input placeholder:text-black/40"
+              placeholder="Photo URL"
+              required
+            />
 
-                    <input
-                      type="email"
-                      className="input placeholder:text-black/40 "
-                      placeholder="Username or Email"
-                      name="email"
-                    />
-                  </label>
-                  <label className="floating-label text-black font-semibold">
-                    <span>Password</span>
-                    <input
-                      type="password"
-                      className="input placeholder:text-black/40 "
-                      placeholder="Password"
-                      name="password"
-                    />
-                  </label>
-                  
+            <label className="label text-black font-semibold">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="input placeholder:text-black/40"
+              placeholder="Email"
+            />
 
-                  <div className="flex justify-between items-center mt-2">
-                    <div>
-                      <label className="label font-semibold text-black">
-                        <input
-                          type="checkbox"
-                          className="checkbox border-2 border-black"
-                        />
-                        Remember me
-                      </label>
-                    </div>
-                    <Link className="text-[#297BE6] underline font-semibold">
-                      Forget Password
-                    </Link>
-                  </div>
+            <label className="label text-black font-semibold">Password</label>
+            <input
+              type="password"
+              name="password"
+              required
+              className="input placeholder:text-black/40"
+              placeholder="Password"
+            />
 
-                  <button className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-2">Register</button>
-                </fieldset>
-              </form>
+            <div className="flex justify-between items-center mt-2">
+              <label className="flex items-center gap-2 font-semibold text-black">
+                <input
+                  type="checkbox"
+                  className="checkbox border-2 border-black"
+                />
+                Remember me
+              </label>
 
-              <p className="text-center font-semibold">
-                Have a account?{" "}
-                <Link to={"/auth/login"} className="text-[#297BE6] underline">
-                  Please Login
-                </Link>
-              </p>
+              <Link
+                to="/auth/forgot-password"
+                className="text-[#297BE6] underline font-semibold"
+              >
+                Forgot Password
+              </Link>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Google */}
-      <div className="text-center w-full pt-5">
-        <button className="btn btn-lg  bg-white text-black border-[#e5e5e5]">
+            <button
+              type="submit"
+              className="btn bg-gradient-to-r from-[#297BE6] to-[#61D2E8] text-white mt-2"
+            >
+              Register
+            </button>
+          </fieldset>
+        </form>
+
+        <p className="text-center font-semibold mt-2">
+          Already have an account?{" "}
+          <Link to="/auth/login" className="text-[#297BE6] underline">
+            Please Login
+          </Link>
+        </p>
+
+        <div className="flex gap-1 items-center px-5 my-3">
+          <div className="w-full border-t border-black/70"></div>
+          <p>Or</p>
+          <div className="w-full border-t border-black/70"></div>
+        </div>
+
+        <button
+          type="button"
+          onClick={handleGoogleSignup}
+          className="btn btn-lg bg-white text-black border-[#e5e5e5] w-full"
+        >
           <svg
             aria-label="Google logo"
             width="25"
@@ -112,7 +157,7 @@ function Register() {
               ></path>
             </g>
           </svg>
-          Login with Google
+          Sign up with Google
         </button>
       </div>
     </div>
