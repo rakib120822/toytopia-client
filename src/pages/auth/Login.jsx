@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 
 import { toast } from "react-toastify";
 import AuthContext from "../../context/AuthContext";
+import { FaEye } from "react-icons/fa";
+import { LuEyeClosed } from "react-icons/lu";
+
 
 function Login() {
-  const { setLoading, setUser, logIn, googleSignUp, } =
+  const { setLoading, setUser, logIn, googleSignUp, setLoginEmail } =
     useContext(AuthContext);
+    const [show,setShow] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,12 +26,15 @@ function Login() {
         setLoading(false);
         navigate(`${location.state ? location.state : "/"}`);
       })
-      .catch((err) => toast.error(err));
+      .catch((err) => toast.error(err.message));
   };
 
   const handleGoogleSignup = () => {
     googleSignUp()
-      .then(() => navigate(`${location.state ? location.state : "/"}`))
+      .then(() => {
+        navigate(`${location.state ? location.state : "/"}`);
+        setLoading(false);
+      })
       .catch((err) => toast.error(err));
   };
 
@@ -44,15 +51,21 @@ function Login() {
               placeholder="Username or Email"
               name="email"
               required
+              onChange={(e) => {
+                setLoginEmail(e.target.value);
+              }}
             />
-            <label className="label text-black font-semibold">Password</label>
-            <input
-              type="password"
-              className="input placeholder:text-black/40"
-              placeholder="Password"
-              name="password"
-              required
-            />
+            <div className="relative">
+              <label className="label text-black font-semibold mb-1">Password</label>
+              <input
+                type={`${show? "text" : "password"}`}
+                className="input placeholder:text-black/40"
+                placeholder="Password"
+                name="password"
+                required
+              />
+              <span className="absolute right-8 top-1/2 z-5" onClick={()=> setShow(!show)}>{show? <LuEyeClosed size={20}/>: <FaEye size={20}/>}</span>
+            </div>
             <div className="flex justify-between items-center mt-2">
               <div>
                 <label className="label font-semibold text-black">
@@ -63,12 +76,13 @@ function Login() {
                   Remember me
                 </label>
               </div>
-              <button
+              <Link
+                to="/auth/forget-password"
                 type="button"
                 className="text-[#297BE6] underline font-semibold"
               >
                 Forget Password
-              </button>
+              </Link>
             </div>
 
             <button className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-2">

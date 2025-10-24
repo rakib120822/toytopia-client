@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router";
 
 import { toast } from "react-toastify";
 import AuthContext from "../../context/AuthContext";
+import { LuEyeClosed } from "react-icons/lu";
+import { FaEye } from "react-icons/fa";
 
 function Register() {
-  const { register, profileUpdate, googleSignUp } = useContext(AuthContext);
+  const [show, setShow] = useState(false);
+  const { register, profileUpdate, googleSignUp, setUser, setLoading, logOut } =
+    useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const displayName = e.target.name.value;
@@ -32,11 +36,15 @@ function Register() {
       register(email, password)
         .then(() => {
           profileUpdate(displayName, photoURL)
-            .then(() => {})
+            .then(() => {
+              setLoading(false);
+              toast.success("Account created! Please login now.");
+              logOut();
+            })
             .catch((err) => {
               toast.error(err.message);
             });
-          toast.success("Successfully Created Account!");
+
           e.target.reset();
         })
         .catch((err) => toast.error(err.message));
@@ -45,7 +53,11 @@ function Register() {
 
   const handleGoogleSignup = () => {
     googleSignUp()
-      .then(() => toast.success("Successfully Created Account!"))
+      .then((res) => {
+        setUser(res.user);
+        toast.success("Successfully Created Account!");
+        setLoading(false);
+      })
       .catch((err) => toast.error(err.message));
   };
 
@@ -83,18 +95,28 @@ function Register() {
               placeholder="Email"
             />
 
-            <label className="label text-black font-semibold">Password</label>
-            <input
-              type="password"
-              name="password"
-              required
-              className="input placeholder:text-black/40"
-              placeholder="Password"
-            />
+            <div className="relative">
+              <label className="label text-black font-semibold mb-1">
+                Password
+              </label>
+              <input
+                type={`${show ? "text" : "password"}`}
+                className="input placeholder:text-black/40"
+                placeholder="Password"
+                name="password"
+                required
+              />
+              <span
+                className="absolute right-8 top-1/2 z-5"
+                onClick={() => setShow(!show)}
+              >
+                {show ? <LuEyeClosed size={20} /> : <FaEye size={20} />}
+              </span>
+            </div>
 
             <button
               type="submit"
-              className="btn bg-gradient-to-r from-[#297BE6] to-[#61D2E8] text-white mt-1"
+              className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-1"
             >
               Register
             </button>

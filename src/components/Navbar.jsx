@@ -4,7 +4,8 @@ import AuthContext from "../context/AuthContext";
 import { toast } from "react-toastify";
 
 function Navbar() {
-  const { loading, setUser, user, logOut,setLoading } = useContext(AuthContext);
+  const { loading, setUser, user, logOut, setLoading } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleBtnClick = () => {
@@ -53,9 +54,13 @@ function Navbar() {
             <li>
               <NavLink to="/products">Products</NavLink>
             </li>
-            <li>
-              <NavLink to="/profile">Profile</NavLink>
-            </li>
+            {user ? (
+              <li>
+                <NavLink to="/profile">Profile</NavLink>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
         <Link className="font-extrabold text-xl">
@@ -74,40 +79,42 @@ function Navbar() {
               Products
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/profile" className={"font-semibold"}>
-              Profile
-            </NavLink>
-          </li>
+          {user ? (
+            <li>
+              <NavLink to="/profile" className={"font-semibold"}>Profile</NavLink>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
       </div>
 
       <div className="navbar-end space-x-3">
-        {!loading ? (
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar relative inline-block group"
-          >
-            <div className="w-10 rounded-full overflow-hidden">
-              <img
-                alt="User Avatar"
-                src={
-                  user?.photoURL
-                    ? user?.photoURL
-                    : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                }
-                className="w-full h-full object-cover"
-              />
-            </div>
+        {user ? (
+          !loading ? (
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar relative inline-block group"
+            >
+              <div className="w-10 rounded-full overflow-hidden">
+                <img
+                  alt="User Avatar"
+                  src={user?.photoURL}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Tooltip */}
-            <span className="absolute top-full left-1/2 transform -translate-x-1/2 my-1 w-max max-w-xs bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
-              {user?.displayName || "Full Toy Name"}
-            </span>
-          </div>
+              {/* Tooltip */}
+              <span className="absolute top-full left-1/2 transform -translate-x-1/2 my-1 w-max max-w-xs bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
+                {user?.displayName || ""}
+              </span>
+            </div>
+          ) : (
+            <span className="loading loading-spinner loading-xl"></span>
+          )
         ) : (
-          <span className="loading loading-spinner loading-xl"></span>
+          ""
         )}
 
         <button
