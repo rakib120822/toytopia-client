@@ -6,6 +6,7 @@ function ErrorPage() {
     const navigate = useNavigate();
   return (
    <div className="max-w-[1200px] mx-auto  flex flex-col justify-center items-center my-10 text-center gap-5">
+    <title>Error - 404</title>
       <img src={errorImg} alt="error page image" />
 
       <div>

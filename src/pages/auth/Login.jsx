@@ -40,6 +40,7 @@ function Login() {
 
   return (
     <div className="card bg-base-100 w-full max-w-sm shrink-0 ">
+      <title>ToyTopia - Login</title>
       <div className="card-body border border-gray-200  ">
         <h1 className="font-bold text-2xl text-center">Login</h1>
         <form onSubmit={handleLogin}>

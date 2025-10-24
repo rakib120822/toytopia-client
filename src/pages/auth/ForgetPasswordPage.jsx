@@ -16,6 +16,7 @@ function ForgetPasswordPage() {
 
   return (
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <title>ToyTopia - Forget Password</title>
       <div className="card-body">
         <fieldset className="fieldset">
           <label className="label">Email</label>

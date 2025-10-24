@@ -63,6 +63,7 @@ function Register() {
 
   return (
     <div className="card bg-base-100 w-full max-w-sm shadow-lg">
+      <title>ToyTopia - Register</title>
       <div className="card-body p-5">
         <h1 className="text-4xl font-bold text-center mb-1">Register Now!</h1>
 

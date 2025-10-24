@@ -7,6 +7,7 @@ function MyToy() {
   const products = data.slice(0, 3);
   return (
     <div className='py-20'>
+      <title>ToyTopia - MyToys</title>
       <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mx-auto">
           {products.map((product) => (
             <Card key={product.toyId} product={product} />

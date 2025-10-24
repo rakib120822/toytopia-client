@@ -24,6 +24,7 @@ function Profile() {
 
   return (
     <div className="py-30 ">
+      <title>ToyTopia - Profile</title>
       <div className="hero ">
         {loading ? (
           <span className="loading loading-bars loading-xl"></span>
