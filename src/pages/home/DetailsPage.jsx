@@ -11,6 +11,7 @@ function DetailsPage() {
 
   return (
     <section className="w-11/12 mx-auto grid grid-cols-12 gap-20 py-20">
+      <title>{data.toyName}</title>
       <div className="col-span-6">
         <DetailCard data={data} />
       </div>

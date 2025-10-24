@@ -12,6 +12,7 @@ function Home() {
 
   return (
     <div>
+      <title>ToyTopia - Home</title>
       <HeroSlider />
       <section className="w-11/12 mx-auto my-30">
         <h2 className="text-center text-4xl font-bold  mb-10 text-[#61D2E8]">

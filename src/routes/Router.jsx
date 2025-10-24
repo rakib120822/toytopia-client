@@ -11,6 +11,7 @@ import ErrorPage from "../pages/error/ErrorPage";
 import PrivateRoute from "../provider/PrivateRoute";
 import Spinner from "../components/Spinner";
 import ForgetPasswordPage from "../pages/auth/ForgetPasswordPage";
+import MyToy from "../pages/home/MyToy";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile",
+
         element: (
           <PrivateRoute>
             <Profile />
@@ -33,17 +35,26 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
+        loader: () => fetch("/data.json"),
         element: (
           <PrivateRoute>
             <DetailsPage />
           </PrivateRoute>
         ),
-        loader: () => fetch("/data.json"),
       },
       {
         path: "/products",
         loader: () => fetch("/data.json"),
         element: <Products />,
+      },
+      {
+        path: "/mytoy",
+        loader: () => fetch("/data.json"),
+        element: (
+          <PrivateRoute>
+            <MyToy />
+          </PrivateRoute>
+        ),
       },
     ],
   },
@@ -60,9 +71,9 @@ export const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path:"/auth/forget-password",
-        element: <ForgetPasswordPage/>
-      }
+        path: "/auth/forget-password",
+        element: <ForgetPasswordPage />,
+      },
     ],
   },
   {

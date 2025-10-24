@@ -61,6 +61,15 @@ function Navbar() {
             ) : (
               ""
             )}
+            {user ? (
+              <li>
+                <NavLink to="/mytoy" className={"font-semibold"}>
+                  MyToy
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
         <Link className="font-extrabold text-xl">
@@ -81,7 +90,18 @@ function Navbar() {
           </li>
           {user ? (
             <li>
-              <NavLink to="/profile" className={"font-semibold"}>Profile</NavLink>
+              <NavLink to="/profile" className={"font-semibold"}>
+                Profile
+              </NavLink>
+            </li>
+          ) : (
+            ""
+          )}
+          {user ? (
+            <li>
+              <NavLink to="/mytoy" className={"font-semibold"}>
+                MyToy
+              </NavLink>
             </li>
           ) : (
             ""
