@@ -13,7 +13,7 @@ function DetailCard({ data }) {
   } = data;
 
   return (
-    <div className="card bg-base-100  shadow-sm hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out">
+    <div className="card bg-base-100  shadow-sm hover:shadow-lg ">
       <figure className="h-[300px]">
         <img
           src={pictureURL}

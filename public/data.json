@@ -7,21 +7,49 @@
     "price": 49.99,
     "rating": 4.7,
     "availableQuantity": 75,
-    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "description": "A timeless set of colorful Lego bricks that encourages creativity, logical thinking, and problem-solving skills. Perfect for kids who love to build, explore, and create unique structures. This set helps develop fine motor skills while keeping playtime fun and engaging.",
     "pictureURL": "https://static01.galaxus.com/productimages/6/2/9/5/5/1/2/5/2/7/9/0/9/0/0/4/3/1/3/5277e4a6-484b-4b1b-aa72-9c59971a8a3a_cropped.jpg_720.jpeg",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "ageRange": "4+ years",
+    "manufacturer": "LEGO Group",
+    "materials": ["ABS Plastic"],
+    "dimensions": "13 x 7 x 4 inches",
+    "weight": "1.4 lbs",
+    "features": [
+      "500+ colorful bricks",
+      "Endless creative possibilities",
+      "Compatible with all LEGO sets"
+    ],
+    "inStock": true,
+    "reviews": 432,
+    "warranty": "6-month replacement warranty",
+    "shipping": "Free delivery within 3–5 business days"
   },
   {
     "toyId": 2,
-    "toyName": "Barbie Dream house",
+    "toyName": "Barbie Dream House",
     "sellerName": "Happy Toys Hub",
     "sellerEmail": "info@happytoyshub.com",
     "price": 89.99,
     "rating": 4.8,
     "availableQuantity": 40,
-    "description": "A deluxe three-story Barbie Dream house with furniture and interactive features for hours of imaginative play.",
+    "description": "A luxurious three-story Barbie Dream House featuring multiple rooms, realistic furniture, and interactive features. This playset inspires storytelling, imagination, and role-play. Children can create magical moments as they explore each beautifully designed room.",
     "pictureURL": "https://static01.nyt.com/images/2022/12/22/fashion/BARBIEDREAM-HOUSE-OPEN/BARBIEDREAM-HOUSE-videoSixteenByNineJumbo1600.jpg",
-    "subCategory": "Dolls & Playsets"
+    "subCategory": "Dolls & Playsets",
+    "ageRange": "3+ years",
+    "manufacturer": "Mattel",
+    "materials": ["Plastic", "Fabric"],
+    "dimensions": "30 x 8 x 29 inches",
+    "weight": "9 lbs",
+    "features": [
+      "3-story house",
+      "Interactive lights and sounds",
+      "Includes furniture and accessories"
+    ],
+    "inStock": true,
+    "reviews": 255,
+    "warranty": "1-year limited warranty",
+    "shipping": "Paid shipping — Delivery in 4–6 business days"
   },
   {
     "toyId": 3,
@@ -31,9 +59,23 @@
     "price": 34.99,
     "rating": 4.6,
     "availableQuantity": 120,
-    "description": "High-speed racing excitement! Kids can design, build, and race cars through custom tracks and loops.",
+    "description": "High-speed racing fun with the customizable Hot Wheels Track Builder Set! Kids can build loops, straight tracks, and exciting curves. Ideal for boosting creativity and engineering skills while enjoying thrilling racing action.",
     "pictureURL": "https://manojstores.com/wp-content/uploads/2023/12/TRACK-1.webp",
-    "subCategory": "Vehicles"
+    "subCategory": "Vehicles",
+    "ageRange": "6+ years",
+    "manufacturer": "Hot Wheels",
+    "materials": ["Plastic"],
+    "dimensions": "16 x 12 x 4 inches",
+    "weight": "2 lbs",
+    "features": [
+      "Customizable track pieces",
+      "Includes 1 Hot Wheels car",
+      "Loop and curve track options"
+    ],
+    "inStock": true,
+    "reviews": 389,
+    "warranty": "6-month warranty",
+    "shipping": "Free delivery over $50"
   },
   {
     "toyId": 4,
@@ -43,9 +85,23 @@
     "price": 24.5,
     "rating": 4.9,
     "availableQuantity": 200,
-    "description": "A soft, huggable teddy bear that provides comfort and companionship for children of all ages.",
+    "description": "A cuddly, soft plush teddy bear designed to bring warmth and comfort. Perfect for bedtime snuggles, emotional bonding, and gifting. Made with hypoallergenic materials to ensure safety for kids of all ages.",
     "pictureURL": "https://image.made-in-china.com/202f0j00OozCgeBFGkby/Big-Size-Brown-Teddy-Bear-Plush-Toy-for-Couch-Sofa-Office-Bed-Kids-Gift-Custom-Bear-Skins-Soft-Stuffed-Animal-Toy.webp",
-    "subCategory": "Stuffed Animals"
+    "subCategory": "Stuffed Animals",
+    "ageRange": "1+ years",
+    "manufacturer": "Cuddle Corner Co.",
+    "materials": ["Plush Fabric", "Cotton Filling"],
+    "dimensions": "18 x 10 x 8 inches",
+    "weight": "1.8 lbs",
+    "features": [
+      "Ultra-soft plush material",
+      "Hypoallergenic",
+      "Durable stitching"
+    ],
+    "inStock": true,
+    "reviews": 512,
+    "warranty": "3-month fabric warranty",
+    "shipping": "Standard delivery in 3–7 days"
   },
   {
     "toyId": 5,
@@ -55,9 +111,23 @@
     "price": 19.99,
     "rating": 4.5,
     "availableQuantity": 95,
-    "description": "Colorful Play-Doh set with molds and tools that let kids express creativity and imagination.",
+    "description": "A colorful Play-Doh set packed with molds, tools, and creative play possibilities. Encourages sensory development, hand strength, and creativity through hands-on sculpting and design.",
     "pictureURL": "https://i.ytimg.com/vi/jCBmQHa8AJk/maxresdefault.jpg",
-    "subCategory": "Arts & Crafts"
+    "subCategory": "Arts & Crafts",
+    "ageRange": "3+ years",
+    "manufacturer": "Hasbro",
+    "materials": ["Non-toxic dough", "Plastic tools"],
+    "dimensions": "11 x 6 x 4 inches",
+    "weight": "1.2 lbs",
+    "features": [
+      "10+ molds and tools",
+      "Bright and vibrant colors",
+      "Non-toxic ingredients"
+    ],
+    "inStock": true,
+    "reviews": 310,
+    "warranty": "No warranty on consumables",
+    "shipping": "Delivery in 2–5 business days"
   },
   {
     "toyId": 6,
@@ -67,9 +137,23 @@
     "price": 29.99,
     "rating": 4.6,
     "availableQuantity": 150,
-    "description": "Classic wooden train set with tracks, bridges, and colorful cars for endless fun.",
+    "description": "A classic wooden train set featuring tracks, bridges, and colorful train cars. This timeless toy promotes creativity, spatial thinking, and motor skills development through hands-on play.",
     "pictureURL": "https://www.dxfdownloads.com/wp-content/uploads/2020/12/Wooden-Train-Laser-Cutting-CNC-File-Free.jpg",
-    "subCategory": "Vehicles"
+    "subCategory": "Vehicles",
+    "ageRange": "3+ years",
+    "manufacturer": "Tiny Tracks Co.",
+    "materials": ["Natural Wood"],
+    "dimensions": "15 x 9 x 4 inches",
+    "weight": "2.5 lbs",
+    "features": [
+      "Eco-friendly wooden material",
+      "Smooth, safe edges",
+      "Easy-to-connect track pieces"
+    ],
+    "inStock": true,
+    "reviews": 245,
+    "warranty": "1-year product warranty",
+    "shipping": "Free shipping available"
   },
   {
     "toyId": 7,
@@ -79,9 +163,23 @@
     "price": 22.99,
     "rating": 4.8,
     "availableQuantity": 180,
-    "description": "Wooden alphabet and number blocks that promote learning through play and exploration.",
+    "description": "A set of durable wooden alphabet and number blocks that help children learn letters, numbers, shapes, and colors. Ideal for early learning and cognitive development.",
     "pictureURL": "https://media.istockphoto.com/id/543660416/vector/wooden-childrens-toy-alphabet-blocks-set.jpg?s=612x612&w=0&k=20&c=TkI3RCvGlMTm2qtRDkVqEFNbLcG02QGNMhK1JUK7IOc=",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "ageRange": "2+ years",
+    "manufacturer": "SmartKids Co.",
+    "materials": ["Wood", "Non-toxic paint"],
+    "dimensions": "8 x 8 x 4 inches",
+    "weight": "1.5 lbs",
+    "features": [
+      "Bright educational blocks",
+      "A–Z letters & 0–9 numbers",
+      "Safe rounded corners"
+    ],
+    "inStock": true,
+    "reviews": 402,
+    "warranty": "6-month material warranty",
+    "shipping": "Delivery within 2–4 business days"
   },
   {
     "toyId": 8,
@@ -91,9 +189,23 @@
     "price": 59.99,
     "rating": 4.4,
     "availableQuantity": 60,
-    "description": "Powerful remote-controlled monster truck built for rugged fun and outdoor excitement.",
+    "description": "A powerful and rugged RC Monster Truck built for off-road adventure. Features high-torque motors, durable tires, and long-range remote control for unstoppable fun.",
     "pictureURL": "https://www.losi.com/on/demandware.static/-/Sites-losi-us-Library/default/dwf41b0fea/homepage/LOS01026T4-homepage-video-still-1935x1080.jpg",
-    "subCategory": "Remote Control"
+    "subCategory": "Remote Control",
+    "ageRange": "7+ years",
+    "manufacturer": "SpeedZone",
+    "materials": ["ABS Plastic", "Metal Frame"],
+    "dimensions": "14 x 9 x 8 inches",
+    "weight": "3 lbs",
+    "features": [
+      "High-speed motor",
+      "Shock-absorbing wheels",
+      "Long-range controller"
+    ],
+    "inStock": true,
+    "reviews": 198,
+    "warranty": "1-year motor warranty",
+    "shipping": "Express & standard shipping available"
   },
   {
     "toyId": 9,
@@ -103,9 +215,19 @@
     "price": 14.99,
     "rating": 4.3,
     "availableQuantity": 130,
-    "description": "Magical unicorn-themed puzzle that helps develop problem-solving and motor skills.",
+    "description": "A magical unicorn-themed puzzle designed to improve problem-solving, hand-eye coordination, and concentration. Vibrant colors and durable pieces ensure long-lasting play.",
     "pictureURL": "https://treasurehunt4kids.com/app/uploads/2021/05/unicorn-jigsaw-puzzle-to-print.jpeg",
-    "subCategory": "Puzzles"
+    "subCategory": "Puzzles",
+    "ageRange": "5+ years",
+    "manufacturer": "Fantasy Fun Co.",
+    "materials": ["Cardboard"],
+    "dimensions": "12 x 10 inches",
+    "weight": "0.6 lbs",
+    "features": ["100-piece puzzle", "Glossy finish", "Vivid unicorn artwork"],
+    "inStock": true,
+    "reviews": 165,
+    "warranty": "No warranty",
+    "shipping": "Budget-friendly shipping options"
   },
   {
     "toyId": 10,
@@ -115,8 +237,22 @@
     "price": 39.99,
     "rating": 4.7,
     "availableQuantity": 85,
-    "description": "Interactive kids’ drum set with lights and sounds — inspires rhythm and coordination.",
+    "description": "An interactive kids’ drum set that lights up with every beat. Helps develop rhythm, coordination, and early musical interest. Perfect for young musicians!",
     "pictureURL": "https://img.freepik.com/free-psd/mardi-gras-icon-rendering_23-2151024754.jpg?semt=ais_hybrid&w=740&q=80",
-    "subCategory": "Musical Toys"
+    "subCategory": "Musical Toys",
+    "ageRange": "3+ years",
+    "manufacturer": "Little Beats Co.",
+    "materials": ["Plastic", "Electronic components"],
+    "dimensions": "15 x 10 x 6 inches",
+    "weight": "2.2 lbs",
+    "features": [
+      "Light-up drum pads",
+      "Multiple sound effects",
+      "Volume control"
+    ],
+    "inStock": true,
+    "reviews": 289,
+    "warranty": "1-year electronic warranty",
+    "shipping": "Fast delivery available"
   }
 ]

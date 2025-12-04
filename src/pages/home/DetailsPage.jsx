@@ -8,64 +8,79 @@ function DetailsPage() {
   id = parseInt(id);
   const products = useLoaderData();
   const data = products.find((product) => product.toyId === id);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-
-    // Try to get data from localStorage
-    let data = localStorage.getItem(name);
-
-    if (!data) {
-      // If no data found => create a new object
-      const newObj = { createdAt: new Date().toISOString(), name: name };
-
-      // Save to localStorage
-      localStorage.setItem(name, JSON.stringify(newObj));
-
-      console.log("New key created:", newObj);
-    } else {
-      // If data exists, parse it and use it
-      data = JSON.parse(data);
-      console.log("Existing data found:", data);
-    }
-
-    toast.info("Thanks for try!");
-  };
 
   return (
-    <section className="w-11/12 mx-auto grid grid-cols-12 gap-20 py-20">
+    <section className="px-10  grid grid-cols-1 md:grid-cols-2 gap-10 py-20">
       <title>{data.toyName}</title>
-      <div className="col-span-6">
+      <div>
         <DetailCard data={data} />
       </div>
-      <div className="col-span-6 flex justify-center items-center">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <div className="card-body">
-            <form onSubmit={handleSubmit}>
-              <fieldset className="fieldset">
-                <label className="label">Name</label>
-                <input
-                  type="text"
-                  className="input"
-                  placeholder="Your name"
-                  name="name"
-                  required
-                />
-                <label className="label">Email</label>
-                <input
-                  type="email"
-                  className="input"
-                  placeholder="Your email"
-                  name="email"
-                  required
-                />
+      <div>
+        <div class="overflow-x-auto">
+          <table class="table table-zebra">
+            <tbody>
+              <tr>
+                <th>1</th>
 
-                <button className="btn bg-linear-to-r from-[#297BE6] to-[#61D2E8] text-white mt-4">
-                  Try Now
-                </button>
-              </fieldset>
-            </form>
-          </div>
+                <td>Sub Category</td>
+                <td>{data.subCategory}</td>
+              </tr>
+
+              <tr>
+                <th>2</th>
+
+                <td>warranty</td>
+                <td>{data.warranty}</td>
+              </tr>
+
+              <tr>
+                <th>3</th>
+
+                <td>dimensions</td>
+                <td>{data.dimensions}</td>
+              </tr>
+              <tr>
+                <th>4</th>
+
+                <td>weight</td>
+                <td>{data.weight}</td>
+              </tr>
+              <tr>
+                <th>5</th>
+
+                <td>inStock</td>
+                <td>{data.inStock ? "available" : "not available"}</td>
+              </tr>
+              <tr>
+                <th>6</th>
+
+                <td>shipping</td>
+                <td>{data.shipping}</td>
+              </tr>
+              <tr>
+                <th>7</th>
+
+                <td>manufacturer</td>
+                <td>{data.manufacturer}</td>
+              </tr>
+              <tr>
+                <th>8</th>
+
+                <td>features</td>
+                <td>
+                  {data.features[0]} ,{data.features[1]} ,{data.features[2]}
+                </td>
+              </tr>
+              <tr>
+                <th>8</th>
+
+                <td>materials</td>
+                <td>
+                  {data.materials[0]} , {data.materials[1]}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
