@@ -1,11 +1,11 @@
-import React from "react";
+import React  from "react";
 import { useLoaderData, useParams } from "react-router";
 import DetailCard from "../../components/DetailCard";
 
 function DetailsPage() {
   let { id } = useParams();
-  id = parseInt(id);
   const products = useLoaderData();
+  id = parseInt(id);
   const data = products.find((product) => product.toyId === id);
 
   return (
@@ -24,7 +24,6 @@ function DetailsPage() {
                 <td>Sub Category</td>
                 <td>{data?.subCategory}</td>
               </tr>
-
               <tr>
                 <th>2</th>
 

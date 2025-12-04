@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("/data.json"),
+        loader: () => fetch("/data.json").then((res) => res.json()),
       },
       {
         path: "/profile",
@@ -46,17 +46,17 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        loader: () => fetch("/data.json"),
+        loader: () => fetch("/data.json").then((res) => res.json()),
         element: <DetailsPage />,
       },
       {
         path: "/products",
-        loader: () => fetch("/data.json"),
+        loader: () => fetch("/data.json").then((res) => res.json()),
         element: <Products />,
       },
       {
         path: "/mytoy",
-        loader: () => fetch("/data.json"),
+        loader: () => fetch("/data.json").then((res) => res.json()),
         element: (
           <PrivateRoute>
             <MyToy />
