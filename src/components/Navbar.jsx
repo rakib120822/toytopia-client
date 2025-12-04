@@ -23,7 +23,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar shadow-sm bg-white ">
+    <nav className="navbar shadow-sm bg-white px-10 sticky top-0 z-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -117,7 +117,10 @@ function Navbar() {
               role="button"
               className="btn btn-ghost btn-circle avatar relative inline-block group"
             >
-              <div onClick={()=> navigate("/profile")} className="w-10 rounded-full overflow-hidden">
+              <div
+                onClick={() => navigate("/profile")}
+                className="w-10 rounded-full overflow-hidden"
+              >
                 <img
                   alt="User Avatar"
                   src={user?.photoURL}

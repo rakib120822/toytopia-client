@@ -17,10 +17,12 @@ import image4 from "../assets/images/toy3.png";
 
 export default function HeroSlider() {
   return (
-    <div>
-      <h1 className="font-medium text-2xl text-center my-10">
-        <span className="font-extrabold text-4xl"><span className="text-[#6EC1E4]">Toy</span>Topia</span> – A Local Kids Toy
-        Store Platform
+    <div className="px-10 ">
+      <h1 className="font-medium text-4xl text-center my-10">
+        <span className="font-extrabold ">
+          <span className="text-[#6EC1E4]">Toy</span>Topia
+        </span>{" "}
+        – A Local Kids Toy Store Platform
       </h1>
 
       <Swiper
@@ -73,8 +75,8 @@ export default function HeroSlider() {
           </div>
         </SwiperSlide>
 
-        <div className="flex  items-center  ">
-          <div className="swiper-button-prev">
+        <div className="">
+          <div className="swiper-button-prev ">
             <FaChevronCircleLeft size={25} />
           </div>
           <div className="swiper-button-next">

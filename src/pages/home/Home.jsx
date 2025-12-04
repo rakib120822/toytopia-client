@@ -8,24 +8,27 @@ import Marquee from "react-fast-marquee";
 
 function Home() {
   const data = useLoaderData();
-  const products = data.slice(0, 3);
+  const products = data.slice(0, 4);
 
   return (
     <div>
       <title>ToyTopia - Home</title>
       <HeroSlider />
-      <section className="w-11/12 mx-auto my-30">
-        <h2 className="text-center text-4xl font-bold  mb-10 text-[#61D2E8]">
+      <section className=" px-10 mx-auto ">
+        <h2 className="text-center text-4xl font-bold  my-10 text-[#61D2E8]">
           Popular <span className="text-black">Toys</span>
         </h2>
-        <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mx-auto">
+        <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-10 mx-auto">
           {products.map((product) => (
             <Card key={product.toyId} product={product} />
           ))}
         </div>
       </section>
-      <section className="w-11/12 mx-auto my-30 ">
-        <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto">
+      <section className="px-10 ">
+        <h2 className="text-center text-4xl font-bold  my-10 text-[#61D2E8]">
+          Feature <span className="text-black">Section</span>
+        </h2>
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto">
           <FeatureCard
             imgUrl={"https://img.icons8.com/dotty/80/free-shipping.png"}
             title={"FAST SHIPPING"}
@@ -48,37 +51,33 @@ function Home() {
           />
         </div>
       </section>
-      <section className="w-11/12 mx-auto my-30 ">
-        <h2 className="text-center text-4xl font-bold   text-[#61D2E8]">
+      <section className="px-10 ">
+        <h2 className="text-center text-4xl font-bold  my-10 text-[#61D2E8]">
           ONLINE <span className="text-black">PARTNERS</span>
         </h2>
         <Marquee autoFill className="flex gap-4" speed={80}>
+          
           <BrandCard
             img={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxbWGODrTH5UlucqoCQfkSpHQww74CMTginw&s"
+              "https://i.ibb.co.com/q3mjbZtz/52939b119881319-Y3-Jvc-Cw4-MDgs-Nj-My-LDAs-MA-removebg-preview.png"
+            }
+          />
+          <BrandCard
+            img={"https://i.ibb.co.com/hJ5r4c7J/images-removebg-preview.png"}
+          />
+          <BrandCard
+            img={
+              "https://i.ibb.co.com/q3W8h9jF/1675345413887-removebg-preview.png"
             }
           />
           <BrandCard
             img={
-              "https://mir-s3-cdn-cf.behance.net/projects/404/52939b119881319.Y3JvcCw4MDgsNjMyLDAsMA.png"
+              "https://i.ibb.co.com/7FpPMFD/6201375-middle-removebg-preview.png"
             }
           />
           <BrandCard
-            img={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9jCZfj9zZVaUvKtKruPbBbz3dezFqcWgGIQ&s"
-            }
+            img={"https://i.ibb.co.com/m5253PJG/images-2-removebg-preview.png"}
           />
-          <BrandCard
-            img={
-              "https://media.licdn.com/dms/image/v2/C4D22AQHhg6z-ac29Eg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1675345413887?e=2147483647&v=beta&t=qV_bZvqDG2-pySKm1dLuuEY_rpcZ0LP3qtbQGwTD4qg"
-            }
-          />
-          <BrandCard
-            img={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VIP-AlCz3EN6-VsbyzcS7m9a8WXRDBGoCA&s"
-            }
-          />
-          <BrandCard img={"https://image.pngaaa.com/375/6201375-middle.png"} />
         </Marquee>
       </section>
     </div>
