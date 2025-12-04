@@ -1,8 +1,13 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast.info("Thanks for your feedback");
+  };
   return (
     <div>
       <div className="hero  ">
@@ -57,7 +62,7 @@ const Contact = () => {
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <fieldset className="fieldset">
                   <label className="floating-label">
                     <span>Name</span>
