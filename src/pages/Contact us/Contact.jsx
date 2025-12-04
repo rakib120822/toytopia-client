@@ -28,7 +28,8 @@ const Contact = () => {
             <div>
               <p>
                 Email: support@toytopia.com <br />
-                📞 Phone: +880 9876 543 210 <br />
+                📞 Phone: +880 1883 860 565
+                <br />
                 📍 Location: Dhaka, Bangladesh
               </p>
               <div className="flex gap-5 justify-center lg:justify-start">
@@ -39,11 +40,6 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="tooltip"
                 >
-                  <div className="tooltip-content">
-                    <div className="animate-bounce -rotate-10 text-2xl font-black">
-                      01883860565
-                    </div>
-                  </div>
                   <FaWhatsapp size={30} color="green" />
                 </a>
 
@@ -54,11 +50,6 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="tooltip"
                 >
-                  <div className="tooltip-content">
-                    <div className="animate-bounce -rotate-10 text-2xl font-black">
-                      Wow!
-                    </div>
-                  </div>
                   <FaFacebook size={30} color="#297BE6" />
                 </a>
 
@@ -71,11 +62,6 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="tooltip"
                 >
-                  <div className="tooltip-content">
-                    <div className="animate-bounce -rotate-10 text-2xl font-black">
-                      Connect with me!
-                    </div>
-                  </div>
                   <FaLinkedin size={30} color="#0A66C2" />
                 </a>
               </div>
