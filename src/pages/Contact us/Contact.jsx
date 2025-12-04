@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
 import { toast } from "react-toastify";
 
@@ -9,10 +9,10 @@ const Contact = () => {
     toast.info("Thanks for your feedback");
   };
   return (
-    <div>
-      <div className="hero  ">
+    <div className="my-10">
+      <div className="hero ">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
+          <div className="text-center  lg:text-left">
             <h2 className="text-center text-4xl font-bold text-[#61D2E8]">
               Contact <span className="text-black">ToyTopia</span>
             </h2>
@@ -31,32 +31,53 @@ const Contact = () => {
                 📞 Phone: +880 9876 543 210 <br />
                 📍 Location: Dhaka, Bangladesh
               </p>
-              <div className="flex gap-5">
-                <div className="tooltip">
+              <div className="flex gap-5 justify-center lg:justify-start">
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/01883860565" // replace with your WhatsApp link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tooltip"
+                >
                   <div className="tooltip-content">
                     <div className="animate-bounce -rotate-10 text-2xl font-black">
                       01883860565
                     </div>
                   </div>
                   <FaWhatsapp size={30} color="green" />
-                </div>
+                </a>
 
-                <div className="tooltip">
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/rakibul.islam.466934" // replace with your FB link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tooltip"
+                >
                   <div className="tooltip-content">
                     <div className="animate-bounce -rotate-10 text-2xl font-black">
                       Wow!
                     </div>
                   </div>
                   <FaFacebook size={30} color="#297BE6" />
-                </div>
-                <div className="tooltip">
+                </a>
+
+                {/* Twitter */}
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/rakibul-islam-payel/" // replace with your LinkedIn link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tooltip"
+                >
                   <div className="tooltip-content">
-                    <div className="animate-bounce  -rotate-10 text-2xl font-black">
-                      Wow!
+                    <div className="animate-bounce -rotate-10 text-2xl font-black">
+                      Connect with me!
                     </div>
                   </div>
-                  <FaTwitter size={30} color="#61D2E8" />
-                </div>
+                  <FaLinkedin size={30} color="#0A66C2" />
+                </a>
               </div>
             </div>
           </div>
