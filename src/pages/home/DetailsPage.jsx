@@ -8,6 +8,29 @@ function DetailsPage() {
   id = parseInt(id);
   const products = useLoaderData();
   const data = products.find((product) => product.toyId === id);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+
+    // Try to get data from localStorage
+    let data = localStorage.getItem(name);
+
+    if (!data) {
+      // If no data found => create a new object
+      const newObj = { createdAt: new Date().toISOString(), name: name };
+
+      // Save to localStorage
+      localStorage.setItem(name, JSON.stringify(newObj));
+
+      console.log("New key created:", newObj);
+    } else {
+      // If data exists, parse it and use it
+      data = JSON.parse(data);
+      console.log("Existing data found:", data);
+    }
+
+    toast.info("Thanks for try!");
+  };
 
   return (
     <section className="w-11/12 mx-auto grid grid-cols-12 gap-20 py-20">
@@ -18,12 +41,7 @@ function DetailsPage() {
       <div className="col-span-6 flex justify-center items-center">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.info("Thanks For Try!");
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <fieldset className="fieldset">
                 <label className="label">Name</label>
                 <input

@@ -3,21 +3,29 @@ import { Link } from "react-router";
 
 function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-linear-to-r from-[#7B74E3] via-[#2B79E0] to-[#61D2E8]   py-3 px-5">
+    <footer className="footer sm:footer-horizontal mt-10 bg-linear-to-r from-[#7B74E3] via-[#2B79E0] to-[#61D2E8]   py-3 px-5">
       <nav className="">
         <h6 className="text-2xl font-bold text-white">Services</h6>
         <Link className="link link-hover text-white/60">Payment Methods</Link>
         <Link className="link link-hover text-white/60">How to buy</Link>
-        <Link className="link link-hover text-white/60">Consumer Complaints</Link>
+        <Link className="link link-hover text-white/60">
+          Consumer Complaints
+        </Link>
         <Link className="link link-hover text-white/60">Support Tickets</Link>
         <Link className="link link-hover text-white/60">Contact Us</Link>
       </nav>
       <nav>
         <h6 className="text-2xl font-bold text-white">Company</h6>
-        <Link className="link link-hover text-white/60">About us</Link>
-        <Link className="link link-hover text-white/60">Contact</Link>
+        <Link to={"/about"} className="link link-hover text-white/60">
+          About us
+        </Link>
+        <Link to={"/contact"} className="link link-hover text-white/60">
+          Contact
+        </Link>
         <Link className="link link-hover text-white/60">Help & FAQs</Link>
-        <Link className="link link-hover text-white/60">Terms & Conditions</Link>
+        <Link className="link link-hover text-white/60">
+          Terms & Conditions
+        </Link>
         <Link className="link link-hover text-white/60">Privacy & Policy</Link>
       </nav>
       <nav>

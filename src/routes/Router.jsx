@@ -12,6 +12,8 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Spinner from "../components/Spinner";
 import ForgetPasswordPage from "../pages/auth/ForgetPasswordPage";
 import MyToy from "../pages/home/MyToy";
+import About from "../pages/About us/About";
+import Contact from "../pages/Contact us/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -34,13 +36,18 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "/about",
+        element: <About />,
+      },
+      {},
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
         path: "/details/:id",
         loader: () => fetch("/data.json"),
-        element: (
-          <PrivateRoute>
-            <DetailsPage />
-          </PrivateRoute>
-        ),
+        element: <DetailsPage />,
       },
       {
         path: "/products",

@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router";
 import FeatureCard from "../../components/FeatureCard";
 import BrandCard from "../../components/BrandCard";
 import Marquee from "react-fast-marquee";
+import Discount from "../../components/Discount";
 
 function Home() {
   const data = useLoaderData();
@@ -23,6 +24,9 @@ function Home() {
             <Card key={product.toyId} product={product} />
           ))}
         </div>
+      </section>
+      <section className="px-10">
+        <Discount/>
       </section>
       <section className="px-10 ">
         <h2 className="text-center text-4xl font-bold  my-10 text-[#61D2E8]">

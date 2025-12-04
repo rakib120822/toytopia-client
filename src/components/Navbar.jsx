@@ -23,7 +23,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar shadow-sm bg-white px-10 sticky top-0 z-5">
+    <nav className="navbar shadow-sm bg-white px-10 sticky top-0 z-5 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,6 +53,12 @@ function Navbar() {
 
             <li>
               <NavLink to="/products">Products</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             {user ? (
               <li>
@@ -86,6 +92,16 @@ function Navbar() {
           <li>
             <NavLink to="/products" className={"font-semibold"}>
               Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={"font-semibold"}>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={"font-semibold"}>
+              Contact
             </NavLink>
           </li>
           {user ? (
